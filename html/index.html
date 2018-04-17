@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The What's Left Farm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="whatsLeft.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <a href="index.html">
+        <img src="flowerRingBanner.png" height=20% width=100%> </a>
+    <section>
+
+        <header class="topnav">
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About</a>
+            <a href="policies.html">Policies</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="prices.html">Pricing and Services</a>
+            <a href="photos.html">Photos</a>
+            <a class="active" href="index.html">Home</a>
+        </header>
+
+        <div class="content">
+            <h1>Welcome to the What's Left Farm!</h1>
+            <p>We are a wedding and events venue located just outside of Nashville, TN.
+                <br>
+                <br>With a capacity of 300 and a variety of event spaces to choose from, we have something for everyone. Call
+                for a tour today!</p>
+        </div>
+
+        <section>
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <img src="backPorch.jpg" style="width:100%">
+                    <div class="text">Back porch</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="flowers1.jpg" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="signBW.jpg" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="frontBarn.jpg" style="width:100%">
+                    <div class="text">Looking into front of barn</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </section>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+    </section>
+
+    <section style="background-color:rgb(138, 43, 43)">
+        <div style="text-align: center">
+            <div style="display: inline-block; text-align: left">
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        Bonnie Hester, 2018.
+    </footer>
+</body>
+
+</html>
