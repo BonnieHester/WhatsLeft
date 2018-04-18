@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The What's Left Farm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="whatsLeft.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <a href="index.html">
+        <img src="../photos/flowerRingBanner.png" height=20% width=100%> </a>
+    <section>
+
+        <header class="topnav">
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About</a>
+            <a href="policies.html">Policies</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="prices.html">Pricing and Services</a>
+            <a href="photos.html">Photos</a>
+            <a class="active" href="index.html">Home</a>
+        </header>
+
+        <div class="content">
+            <h1>Welcome to the What's Left Farm!</h1>
+            <p>We are a wedding and events venue located just outside of Nashville, TN. Our main event space is a former horse
+                barn, and through extensive renovations it has retained its rustic charm. The atmosphere lends itself to
+                comfort for any visitor - even if on first thought, a barn does not sound like the space for you, we recommend
+                you still come visit! You might be surprised at just how well it works for you.
+                <br>
+                <br>With a capacity of 200 and a variety of event spaces to choose from, we have something for everyone. Call
+                today at
+                <a href="tel:+1-662-721-8155">(662) 721-8155</a> to schedule a tour!</p>
+        </div>
+
+        <section>
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <img src="../photos/backPorch.jpg" style="width:100%">
+                    <div class="text">Back porch</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="../photos/flowers1.jpg" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="../photos/signBW.jpg" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="../photos/frontBarn.jpg" style="width:100%">
+                    <div class="text">Looking into front of barn</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="../photos/frontPorch.jpg" style="width:100%">
+                    <div class="text">Front porch of house</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="../photos/BLSun.jpg" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="../photos/BLTrees.jpg" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="../photos/cake.jpg" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="../photos/firstDance.jpg" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="../photos/LaurenParents.jpg" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="../photos/lightSparklers.jpg" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="../photos/pumpkins.jpg" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="../photos/trellis.jpg" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(9)"></span>
+                <span class="dot" onclick="currentSlide(10)"></span>
+                <span class="dot" onclick="currentSlide(11)"></span>
+                <span class="dot" onclick="currentSlide(12)"></span>
+                <span class="dot" onclick="currentSlide(13)"></span>
+            </div>
+        </section>
+
+
+        <script>
+            //these functions based heavily on the following tutorial: 
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+    </section>
+
+    <section style="background-color:rgb(138, 43, 43)">
+        <div style="text-align: center; margin: auto">
+            <div style="text-align: left; margin: auto">
+                <h3 style="color:white">Who We Are</h3>
+                <p style="color:white">We are located on five acres of land originally part of the historic Curtis family farm, dating back to 1861.
+                    After winning Grand Champion Mule at the state fair in 1997, Martin Curtis, JR was asked the name of
+                    the farm he represented. With the promise that this land would not be developed, he named it the “What’s
+                    Left Farm.”</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div style="text-align: center; margin: auto">
+            <div style="text-align: left; margin: auto">
+                <h3>What We Do</h3>
+                <p>The barn is 6400 square feet with gravel floors, large door openings at either end, and nine double doors
+                    along each side. It is outfitted with lights and electricity, but limited climate control so the expected
+                    season is March to November. We are a perfect space for rustic weddings, family reunions, and any number
+                    of social gatherings or photo shoots.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color:rgb(138, 43, 43)">
+        <div style="text-align: center; margin: auto">
+            <div style="text-align: left; margin: auto">
+                <h3 style="color:white">Where We Are</h3>
+                <p style="color:white">Hendersonville is the “City by the Lake”, and our property does indeed have a wonderful view of Old Hickory
+                    Lake from our situation atop a hill just across the street from the water! Even nestled in the peace
+                    of this town and the lake, we are only a 30-minutes drive from all the excitement of the city of Nashville.
+                    Numerous businesses in our area rent and deliver tables, chairs, and dance floors. Several excellent
+                    caterers and photographers are also convenient to the neighborhood. </p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        Bonnie Hester, 2018.
+    </footer>
+</body>
+
+</html>
